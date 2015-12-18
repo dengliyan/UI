@@ -1,6 +1,10 @@
 /*
 	StockStar Javascript Library
 */
+
+//2015-12-18
+
+
 !(function(window){
 	var stockstar ={};
 	
