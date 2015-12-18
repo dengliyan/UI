@@ -1,0 +1,8 @@
+﻿/*
+    功能描述：行情报价器
+    发布日期：2012-05-16
+    作    者：ly.deng
+    版    本：1.0
+*/
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('4 v={t:3(){p 3(){6.A.13(6,12)}}};c.d=3(j,m){u(l w m){j[l]=m[l]}p j};4 G=v.t();c.d(G.17,{A:3(8){4 2=6;2.B(8);2.i();4 k=16(3(){2.i()},2.5.k*10)},B:3(8){6.5={D:[],x:\'\',9:\'T://q.S.R/Q/U/V.Y?q={q}&n=H&f={f}\',I:3(q){p""},b:{},k:19};c.d(6.5,8||{})},i:3(){4 2=6;4 z=2.5.9.E("{q}",2.5.D.1p(",")).E("{f}",F.1i(1d F()));2.y.C(z,\'1f\',3(){2.5.b=1g.H||{};u(4 a w 2.5.b){4 q=2.5.b[a];4 s=2.5.I(q);$("#"+2.5.x+""+q[0]).18(s)}})},y:{C:3(9,7,K){4 1=r.1l(\'1c\');4 P=6;O(!(7==N||7==\'\')){1.g(\'7\',7)}1.g(\'1k\',\'1o/1e\');1.g(\'1h\',9);r.1q(\'1b\')[0].1j(1);1.L=1.M=3(){O(!6.h||6.h=="1n"||6.h=="1m"){K(1);P.J(1)}}},J:3(o){4 1=(1a o=="X")?r.Z(o):o;1.L=1.M=N;15{1.14.11(1)}W(e){}}}});',62,89,'|_js|_t|function|var|options|this|charset|opt|url||cache|Object|extend||tick|setAttribute|readyState|update|destination|interval|property|source|||return||document||create|for|Class|in|tag|utils|_url|initialize|setOptions|loadJs|data|replace|Date|QuoteBinder|ssQuote|format|removeJs|callback|onload|onreadystatechange|null|if|_this|info|cn|ssajax|http|handler|xquotehandler|catch|string|ashx|getElementById|1000|removeChild|arguments|apply|parentNode|try|setInterval|prototype|html|60|typeof|head|script|new|javascript|gb2312|window|src|parse|appendChild|type|createElement|complete|loaded|text|join|getElementsByTagName'.split('|'),0,{}))
+

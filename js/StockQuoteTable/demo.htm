@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="StockQuoteTable.js" type="text/javascript" charset='gb2312'></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <style type="text/css">
+	body{padding:0;margin:0;font-size:12px}
+	/* 股票版 */
+.stocktable{ width:100%;  }
+.stocktable table, .stocktable td{font:100% Arial, Helvetica, sans-serif ;}
+.stocktable table{width:100%;border-collapse:collapse;margin:0;}
+.stocktable table th, .stocktable table td{padding:6px;border:1px solid #d0d0d0; text-align:center}
+.stocktable table td.right{ text-align:right; padding-right:6px}
+.stocktable table td.num{ font-weight: bold;}
+.stocktable table th{font-weight:normal;}
+.stocktable table td a:hover{text-decoration:underline;}
+.stocktable table th{background:#e9e9e9;}
+.stocktable table td{background:#f2f2f2;vertical-align:middle}
+.stocktable table tr.even td{background:#fff;}
+.stocktable table tr.odd td{background:#f2f2f2;}
+.stocktable table tr span{ font-family:"宋体";vertical-align:middle}
+.stocktable table td.over, .stocktable table tr.even td.over, .stocktable table tr.odd td.over{background:#FFFAF0;}
+.stocktable table td.down, .stocktable table tr.even td.down, .stocktable table tr.odd td.down{background:#FFF8DC;}
+.stocktable table td.selected, .stocktable table tr.even td.selected, .stocktable table tr.odd td.selected{background:#FFF8DC;}
+.stocktable table td.empty, .stocktable table tr.odd td.empty, .stocktable table tr.even td.empty{background:#fff;}
+.stocktable table td{font-family:Arial, 宋体;}
+.stocktable table td a:link{color:#15518f;}
+.stocktable table td a:visited{color:#15518f;}
+.stocktable table td a:hover{color:#f00;}
+
+    </style>
+</head>
+<body>
+    <div id="voteDiv7" class="stocktable"></div>
+    <script type="text/javascript">
+	
+       var ssQuote=new StockQuoteTable("voteDiv7",{
+		   args:
+		   {
+				i:'s|000001,000002,600000,300059,600300,000005,300001,300002',
+				p:10,
+				o:'cr|desc',
+				n:'ssQuoteVal'
+			},
+		   columns:['code', 'name', 'close', 'cv','cr','open','prev','high','low','lhr','pe','tr','wb','lb', 'info'],
+		   timeOut:3
+		});
+	  
+    </script>
+</body>
+</html>

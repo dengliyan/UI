@@ -1,0 +1,76 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+   <script src="http://j.ssajax.cn/js/lib/StockSuggest.min.1.8.js?_t=2015.12.04" type="text/javascript" charset="gb2312"></script>
+	 <!--<script src="StockSuggest.min.1.8.js" type="text/javascript" charset="gb2312"></script>-->
+    <style type="text/css">
+    .position{ position:fixed}
+    </style>
+</head>
+<body style="padding:0; margin:0; font-size:12px">
+	<input type="button" id="btn" value="to submit" />
+    <div style="margin-left:100px">
+        <div style=" width:600px; height:250px; position:relative; background:#000; margin-left:100px;float:left">
+
+
+        <input type="text" id="A1" style="margin-left:100px; margin:50px;" />
+            <div style="background:#F2F2F2; position:absolute;  bottom:0; right:0; width:300px; height:200px;">
+            <input type="text" id="Text1" name="code" style="margin-left:100px; margin:50px;" />
+			
+			
+			
+             <div style="background:#F00; position:absolute;  bottom:0; right:50px; width:200px; height:50px;">
+                   <div style="margin-left:20px">
+                        <input type="text" id="Text2" name="code" style="margin-left:100px; margin:50px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style=" width:400px; float:left">
+                <input type="text" id="A3" />
+
+    </div>
+    <div style=" background:#F2F2F2;   bottom:0; left:0; width:300px; height:20px; z-index:1;" class="position">
+
+            
+                <input type="text" id="A2" />
+
+       
+     </div>
+
+
+     <script type="text/javascript">
+         new StockSuggest("A1",{evt:'btn',shortcutKey:true,types:[101, 102, 103, 104,105, 201, 300,301, 401, 403, 405, 501, 502, 503, 504]});
+         new StockSuggest("A2");
+         new StockSuggest("A3");
+         new StockSuggest("Text1");
+         new StockSuggest("Text2",{autoSubmit:false,callback:function(i,a,b){		 
+			i.goto('http://stock.quote.stockstar.com/'+a[0]+'.shtml',b);
+		 }});
+		 /*var a=[0,1,2,3,4,5,6,7,8]
+		 a=a.slice(0,a.length-1);
+		 a.push(9)
+		 alert(a);*/
+     </script>
+	 
+	 <div style="clear:both"></div>
+	 
+	 <form action="http://quote.stockstar.com/stock/exdir.aspx" target="_blank" id="aa">	 
+	 <input type="text" id="stockOnly" />
+	 </form>
+	 <script type="text/javascript">
+		
+		
+		new StockSuggest("stockOnly",{width:"240px",types:[],status:[0,1,2,3,4,5,6,7,8],multiple:true});
+	 </script>
+	 
+	 
+	 <script src="http://www.stockstar.com/js/stockstar_foot.js"></script>
+</body>
+</html>

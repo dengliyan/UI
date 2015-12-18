@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta content="text/html; charset=gb2312" http-equiv="content-type">
+<script type="text/javascript">
+//读取脚本文件
+function getScript(url, callback) {
+	var script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src = url;
+	script.onload = script.onreadystatechange = function() {
+		if (!this.readyState ||this.readyState === "loaded" || this.readyState === "complete") {
+			this.onload = this.onreadystatechange = null;
+			document.getElementsByTagName('head')[0].removeChild(this);
+			callback();
+		}
+	};
+	document.getElementsByTagName('head')[0].appendChild(script);
+};
+
+//jsonp读取
+function jsonp(option, callback) {  
+	//没有指定url或回调
+	if(!option.url || !callback)  return;
+	//初始化
+	var data = option.data || {};
+	//建立一个回调函数名
+	data["callback"] = 'jsonp' + new Date().getTime();
+	//创建一个代理调用函数
+	window[data["callback"]] = function(json) {
+		//通过回调执行
+		option.callback(json);
+    };	
+	//重新生成一个url地址,将回调函数返回
+	var url = option.url + '&callback=callback000001';	
+	//执行加载.
+	getScript(url,function(){
+		window[data["callback"]] = null;
+		try{delete window[data["callback"]];}catch(e){}
+	});
+}        
+</script>
+</head>
+<body>
+
+</body>
+</html>	
+	

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head id="head">
+    <meta charset="gb2312"/>
+    <title>jQuery的domReady </title>
+	<style type="text/css">
+	body{padding:0;margin:0}
+	</style>
+	<script src="SJL.js"></script>
+	<script type="text/javascript">
+		$.utils.domReady(function(){
+			
+			//
+			$.ajax.jsonp('http://tg.zhengjin99.com/zhengjin/retg_ajax.jsp?activityID=RWTG1_zqzx_20130425&mobNo=13000000000','gb2312',function(json){
+				alert(json[0].msg);
+			},'callbackparam');
+			
+			var node=$.dom.createElement('div',{id:'div','class':'aaa bbb',style:'background-color:#f00;width:90px;height:90px;',innerHTML:'DIV'});
+			document.body.appendChild(node);
+			$.dom.addClass(node,'ccc');
+		});
+	</script>
+  </head>
+  <body>
+   
+  </body>
+</html>
+

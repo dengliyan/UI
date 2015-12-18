@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Animate</title>
+        <script src="http://www.dklogs.net/myLogs.js">
+        </script>
+        <script src="http://www.dklogs.net/dkTools.js">
+        </script>
+        <script type="text/javascript" src="http://www.dklogs.net/motion.js">
+        </script>
+    </head>
+    <body>
+        <div id="myDiv" style="position:absolute;left:0;background:#6cf; border:10px solid #06c; overflow:hidden;width:300px; height:500px;display:block;">
+            一位网友提议说是红色太刺眼，对眼睛不好，这里就换成蓝色，嘿嘿。主要是红色的代码比较简单而且显眼，所以才在测试的时候才常用。<br />
+			mo('myDiv').slideUp();//向上闭合<br />
+			mo('myDiv').slideDown()//向下展开<br />
+			mo('myDiv').animate({left:'240px',opacity:'0.2',backgroundColor:'#0f0'})<br />
+			mo('myDiv').animate({opacity:'1'})<br />
+			mo('myDiv').changeColor('#fff','#ff0')
+        </div>
+        <div id="div2" style="position:absolute; right:0; background:#ff0;">
+            <a href="http://www.dklogs.net" target="_blank" onclick="alert('a');return false;">DKlogs</a>
+        </div>
+        <div style="position:absolute; bottom:0;">
+            <input type="button" id="btn" value="向上闭合" onclick="mo('myDiv').slideUp();"/><input type="button" id="btn" value="向下展开" onclick="mo('myDiv').slideDown()"/><input type="button" id="btn" value="复杂变化" onclick="mo('myDiv').animate({left:'240px',opacity:'0.2',backgroundColor:'#0f0'})"/><input type="button" id="btn" value="变为不透明" onclick="mo('myDiv').animate({opacity:'1'})"/><input type="button" id="btn" value="黄退效果" onclick="mo('myDiv').changeColor('#fff','#ff0')"/>
+        </div>
+    </body>
+</html>
